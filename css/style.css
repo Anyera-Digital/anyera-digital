@@ -1,32 +1,22 @@
-/* Copyright (c) Justin Callaghan (latin) / Mr. Nobody (cyrillic). All rights reserved. http://fonts.by */
-@font-face {
-  font-family: "Space";
-  src: local("Space"),
-    local("Space"),
-    url('../fonts/space.woff') format('woff'),
-    url('../fonts/space.woff2') format('woff2'),
-    url('../fonts/space.ttf') format('ttf');
-}
-
 :root {
   --inc-step: 1;
-  --gray-border: #D3D3D3;
+  --gray-border: #d3d3d3;
   --dark-border: #424242;
-  --page-bg: #F8F8F8;
+  --page-bg: #f8f8f8;
   --page-text: #262626;
-  --purple: #644BB1;
-  --red: #A20109;
-  --error: #D91717;
-  --green: #0FE397;
+  --purple: #644bb1;
+  --red: #a20109;
+  --error: #d91717;
+  --green: #0fe397;
   --inter: 'Inter', sans-serif;
   --space: 'Space', sans-serif;
 }
 
 .dark {
   /* Dark mode */
-  --page-bg: #0F0F0F;
-  --page-text: #F8F8F8;
-  /* --purple: #0FE397; */
+  --page-bg: #0f0f0f;
+  --page-text: #f8f8f8;
+  /* --purple: #0fe397; */
   --gray-border: var(--dark-border);
 }
 

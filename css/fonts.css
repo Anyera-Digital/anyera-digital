@@ -1,14 +1,21 @@
-/* Copyright (c) Justin Callaghan (latin) / Mr. Nobody (cyrillic). All rights reserved. http://fonts.by */
+/* Play font */
 @font-face {
-  font-family: "Space";
-  src: local("Space"),
-  local("Space"),
-  url('../fonts/space.woff') format('woff'),
-  url('../fonts/space.woff2') format('woff2'),
-  url('../fonts/space.ttf') format('ttf');
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/play/play-400.woff2') format('woff2');
 }
 
-/* Inter fonts */
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/play/play-700.woff2') format('woff2');
+}
+
+/* Inter font */
 @font-face {
   font-display: swap;
   font-family: 'Inter';

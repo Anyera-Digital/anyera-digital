@@ -282,24 +282,22 @@ button, button:focus, button:hover, button:active {
   transition-delay: 0.1s;
 }
 
-.button__language {
-  height: 30px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 11px;
-  color: var(--text-clr);
-  background: var(--bg-clr);
+.change-language__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
   -webkit-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
 
-.button__language svg {
-  width: 21px;
-  height: 21px;
-  fill: var(--text-clr);
-}
-
-.button__language:hover, .button__language:active, .button__language.active {
+.change-language__btn:hover,
+.change-language__btn:active,
+.change-language__btn.active {
   color: var(--purple);
 }
 
@@ -987,29 +985,26 @@ button, button:focus, button:hover, button:active {
   z-index: 1;
 }
 
-.header__language_block, .button__languages {
+.change-language,
+.change-language__control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   gap: 10px;
 }
 
-.button__languages {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-transition: width 0.3s linear;
-  transition: width 0.3s linear;
-  overflow: hidden;
+.change-language {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
+.change-language__icon {
+  display: flex;
+}
 /* end header__nav */
 
 /* start header__consultation */
-
 .header__consultation {
   display: -webkit-box;
   display: -ms-flexbox;

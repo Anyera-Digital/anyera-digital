@@ -397,25 +397,26 @@ hover.addEventListener('mouseout', function(e) {
 })
 // end hover menu
 
-// start dark mode
-const btnlight = document.querySelector('.button__light');
-const btndark = document.querySelector('.button__dark');
+// Change color mode start
+const toggleClrMode = document.querySelector('.js-change-clr-mode');
+const toggleClrModeBtnArr = document.querySelectorAll('.js-change-clr-mode .clr-mode__btn');
+const toggleClrModeTxt = document.querySelector('.js-change-clr-mode .clr-mode__name');
+
 // 1. Проверка темной темы на уровне системных настроек
 if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ) {
-  btndark.classList.add("active");
-  btnlight.classList.remove("active");
 	document.body.classList.add("dark");
+  toggleClrMode.setAttribute('data-clr-mode-active', 'dark');
 }
 
 // 2. Проверка темной темы в localStorage
-if (localStorage.getItem('darkMode') === 'dark') {
-  btndark.classList.add("active");
-  btnlight.classList.remove("active");
+if (localStorage.getItem('clrMode') === 'dark') {
   document.body.classList.add("dark");
-} else if (localStorage.getItem("darkMode") === "light") {
-  btndark.classList.remove("active");
-  btnlight.classList.add("active");
+  toggleClrMode.setAttribute('data-clr-mode-active', 'dark');
+  toggleClrModeTxt.innerHTML = 'light on';
+} else {
   document.body.classList.remove("dark");
+  toggleClrMode.setAttribute('data-clr-mode-active', 'light');
+  toggleClrModeTxt.innerHTML = 'dark on';
 }
 
 // Если меняются системные настройки, меняем тему
@@ -423,39 +424,31 @@ window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", (event) => {
   const newColorScheme = event.matches ? "dark" : "light";
+
   if (newColorScheme === "dark") {
-    btndark.classList.add("active");
-    btnlight.classList.remove("active");
     document.body.classList.add("dark");
-    localStorage.setItem("darkMode", "dark");
+    localStorage.setItem("clrMode", "dark");
+    toggleClrMode.setAttribute('data-clr-mode-active', 'dark');
   } else {
-    btndark.classList.remove("active");
-    btnlight.classList.add("active");
     document.body.classList.remove("dark");
-    localStorage.setItem("darkMode", "light");
+    localStorage.setItem("clrMode", "light");
+    toggleClrMode.setAttribute('data-clr-mode-active', 'light');
   }
 });
 
-// Включение дневного режима по кнопке
-document.querySelector('.button__light').addEventListener('click', function() {
-  if (btndark.classList.contains("active")) {
-    btndark.classList.remove("active");
-    btnlight.classList.add("active");
-  }
-  document.body.classList.remove("dark");
-  localStorage.setItem("darkMode", "light");
-})
+// переключение темного/светлого режима
+toggleClrModeBtnArr.forEach((btn) => {
+  btn.addEventListener('click', function () {
+    const clrModeAttr = this.getAttribute('data-clr-mode');
+    const clrModeName = clrModeAttr === 'dark' ? 'light' : 'dark';
 
-// Включение ночного режима по кнопке
-document.querySelector('.button__dark').addEventListener('click', function() {
-  if (btnlight.classList.contains("active")) {
-    btnlight.classList.remove("active");
-    btndark.classList.add("active");
-  }
-  document.body.classList.add("dark");
-  localStorage.setItem("darkMode", "dark");
-})
-// end dark mode
+    toggleClrMode.setAttribute('data-clr-mode-active', clrModeAttr);
+    toggleClrModeTxt.innerHTML = `${clrModeName} on`;
+    localStorage.setItem("clrMode", clrModeAttr);
+    document.body.classList.toggle("dark");
+  });
+});
+// Change color mode end
 
 // start accordion
 var acc = document.getElementsByClassName("accordion__button");

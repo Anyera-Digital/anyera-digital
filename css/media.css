@@ -6,7 +6,7 @@
 
 @media (max-width: 959px) {
   .header__nav_bottom-item:not(:last-child),
-  .header__nav_bottom_flex {
+  .settings {
     margin-bottom: 30px;
   }
 }
@@ -128,22 +128,19 @@
     flex: 1 1 100%;
   }
 
-  .header__nav_bottom_flex,
+  .settings,
   .header__nav_bottom_social {
     max-width: calc(50% - 10px);
   }
 
-  .header__nav_bottom_flex {
+  .settings {
     justify-content: flex-start;
+    gap: 50px;
   }
 
   .header__nav__contact_list {
     display: flex;
     justify-content: space-between;
-  }
-
-  .header__nav_contact_item {
-    margin-bottom: 0;
   }
 
   .header__nav_bottom_social {
@@ -173,7 +170,7 @@
     gap: 0;
   }
 
-  .header__nav_bottom_flex {
+  .settings {
     align-items: flex-end;
     max-width: 38.8%;
   }
@@ -182,6 +179,10 @@
     gap: 60px;
     justify-content: center;
     max-width: 61.2%;
+  }
+
+  .header__nav_contact_item:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .header__nav_bottom_social {
@@ -202,7 +203,7 @@
     max-width: 70%;
   }
 
-  .header__nav_bottom_flex {
+  .settings {
     max-width: 30%;
   }
 

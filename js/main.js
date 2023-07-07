@@ -1319,7 +1319,7 @@ if(!pfilter){} else {
 }
 
 let say = document.querySelector('.say');
-let says = document.querySelectorAll('.say__flex');
+let says = document.querySelectorAll('.say__content');
 if(!say){} else {
   function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});};
   let sayopt = {threshold: [0.5]};

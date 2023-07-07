@@ -9,6 +9,10 @@
   .settings {
     margin-bottom: 30px;
   }
+
+  .say__desc {
+    margin-bottom: 15px;
+  }
 }
 
 @media (min-width: 480px) {
@@ -153,6 +157,17 @@
     align-items: center;
     justify-content: flex-end;
   }
+
+  .say__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -211,6 +226,10 @@
     top: 60px;
     right: 130px;
     flex-direction: column;
+  }
+
+  .say__head br {
+    display: none;
   }
 }
 

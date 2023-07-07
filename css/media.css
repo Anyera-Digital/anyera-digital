@@ -1,6 +1,10 @@
-@media (max-width: 640px) {
+@media (max-width: 639px) {
   .header__name {
     display: none;
+  }
+
+  .footer-navigation-grid__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -12,6 +16,10 @@
 
   .say__desc {
     margin-bottom: 15px;
+  }
+
+  .footer__contacts {
+    margin-bottom: 60px;
   }
 }
 
@@ -60,6 +68,15 @@
   .header__nav_bottom {
     padding-left: 75px;
     padding-right: 75px;
+  }
+
+  .footer-navigation-grid {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-navigation-grid__item {
+    flex: 1 1 33.33%;
   }
 }
 
@@ -167,6 +184,18 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+  }
+
+  .footer__content {
+    display: flex;
+  }
+
+  .footer__contacts {
+    flex: 1 1 39%;
+  }
+
+  .footer__navigation {
+    flex: 1 1 61%;
   }
 }
 

@@ -1278,7 +1278,7 @@ if(!project){} else {
 
 let footer = document.querySelector('.footer');
 let footerlist = document.querySelectorAll('.footer__list');
-let footerinfo = document.querySelectorAll('.footer__info');
+let footerinfo = document.querySelectorAll('.footer__privacy');
 let footercontacts = document.querySelectorAll('.footer__contacts_list');
 let footersocial = document.querySelectorAll('.footer__social');
 if(!footer){} else {

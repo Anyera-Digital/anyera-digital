@@ -15,7 +15,7 @@ h1 {
 }
 
 h2 {
-  font-size: 80px;
+  font-size: 28px;
 }
 
 h3 {
@@ -68,4 +68,17 @@ button {
   background: transparent;
   -webkit-transition: color 0.1s linear, border-color 0.3s linear;
   transition: color 0.1s linear, border-color 0.3s linear;
+}
+
+/*** Typography media ***/
+@media (min-width: 480px) {
+  h2 {
+    font-size: 55px;
+  }
+}
+
+@media (min-width: 960px) {
+  h2 {
+    font-size: 80px;
+  }
 }

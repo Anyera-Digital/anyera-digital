@@ -1,0 +1,23 @@
+:root {
+  --inc-step: 1;
+  --text-font: 'Inter', sans-serif;
+  --title-font: 'Play', sans-serif;
+  --bg-clr: #f8f8f8;
+  --text-clr: #262626;
+  --gray-border: #d3d3d3;
+  --border-clr: #cfcfcf;
+  --border-1: 1px solid var(--border-clr);
+  --orange: #e7b85c;
+  --purple: #644bb1;
+  --red: #a20109;
+  --error: #d91717;
+  --green: #0fe397;
+}
+
+/* Dark mode */
+.dark {
+  --bg-clr: #0f0f0f;
+  --text-clr: #f8f8f8;
+  --border-clr: #424242;
+  --gray-border: #424242;
+}

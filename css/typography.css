@@ -11,7 +11,7 @@ h5 {
 }
 
 h1 {
-  font-size: 110px;
+  font-size: 28px;
 }
 
 h2 {
@@ -77,8 +77,26 @@ button {
   }
 }
 
+@media (min-width: 640px) {
+  h1 {
+    font-size: 55px;
+  }
+}
+
 @media (min-width: 960px) {
   h2 {
     font-size: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 78px;
+  }
+}
+
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 110px;
   }
 }

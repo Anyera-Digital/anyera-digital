@@ -777,26 +777,29 @@ if(!elsliderteam){} else {
 // end team slider
 
 // start video
-const preview = document.querySelector('.showreel__button');
-const showreelvideo = document.getElementById('showreel__video');
-const showreelmodal = document.querySelector('.showreel__modal');
-const showreelmodalClose = document.querySelector('.showreel__modal_close');
-if(!showreelvideo){} else {
+const showreelVideo = document.getElementById('showreel__video');
+
+if(showreelVideo) {
+  const preview = document.querySelector('.showreel__button');
+  const showreelModal = document.querySelector('.showreel__modal');
+  const showreelModalClose = document.querySelector('.showreel__modal_close');
+
   preview.onclick = function(e) {
     e.preventDefault();
-    showreelmodal.classList.add('showreel__modal_visible');
+
+    showreelModal.classList.add('showreel__modal_visible');
     document.querySelector('.spec__overlay').classList.add('is-playing');
-    showreelvideo.play();
+    showreelVideo.play();
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
     var t;
     window.addEventListener('mousemove', () => {
       if (t) {
-        showreelmodal.classList.remove('hide')
+        showreelModal.classList.remove('hide')
         clearTimeout(t)
         t = 0
       }
-      t = setTimeout(() => showreelmodal.classList.add('hide'), 1500)
+      t = setTimeout(() => showreelModal.classList.add('hide'), 1500)
     });
     const progress = document.querySelector('.progress');
     const progressLine = document.querySelector('.progress__line');
@@ -804,15 +807,17 @@ if(!showreelvideo){} else {
       progressLine.style.left = e.offsetX + 'px';
     });
   }
-  showreelmodalClose.onclick = function() {
+
+  showreelModalClose.onclick = function() {
     document.querySelector('.spec__overlay').classList.remove('is-playing');
-    showreelmodal.classList.remove('showreel__modal_visible');
-    showreelvideo.pause();
-    showreelvideo.currentTime = 0;
+    showreelModal.classList.remove('showreel__modal_visible');
+    showreelVideo.pause();
+    showreelVideo.currentTime = 0;
     document.body.style.overflow = "visible";
     document.body.style.height = "100%";
   }
 }
+
 (function () {
   // helpers
   var regExp = function regExp(name) {

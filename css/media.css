@@ -54,6 +54,32 @@
     padding-left: 17px;
   }
 
+  .breadcrumbs__list {
+    margin: 45px 0 30px;
+  }
+
+  .breadcrumbs__item:not(:last-child):after {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .tag-list {
+    margin: 30px 0;
+  }
+
+  .article {
+    margin-bottom: 55px;
+  }
+
+  .article__image {
+    height: 320px;
+    margin-bottom: 50px;
+  }
+
+  .article__description p {
+    margin-bottom: 50px;
+  }
+
   .footer__privacy {
     display: flex;
     justify-content: space-between;
@@ -85,6 +111,10 @@
   .header__nav_bottom {
     padding-left: 75px;
     padding-right: 75px;
+  }
+
+  .article__image {
+    height: 440px;
   }
 
   .footer-navigation-grid {
@@ -198,6 +228,10 @@
   .header__nav_bottom_social {
     align-items: center;
     justify-content: flex-end;
+  }
+
+  .article__image {
+    height: 700px;
   }
 
   .say__bottom {

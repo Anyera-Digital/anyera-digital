@@ -20,4 +20,5 @@
   --text-clr: #f8f8f8;
   --border-clr: #424242;
   --gray-border: #424242;
+  --border-1: 1px solid var(--border-clr);
 }

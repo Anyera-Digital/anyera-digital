@@ -2727,6 +2727,7 @@ video {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  row-gap: 15px;
   margin: 15px 0;
 }
 
@@ -5342,4 +5343,25 @@ html.has-scroll-dragging {
 
 .article__description p {
   margin-bottom: 15px;
+}
+
+.privacy-page {
+  margin-top: 30px;
+}
+
+.rules-list__title,
+.rules-list {
+  margin-bottom: 30px;
+}
+
+.rules-list__title {
+  word-break: break-word;
+}
+
+.rules-list__desc a {
+  color: var(--purple);
+}
+
+.rules-list__item:not(:last-child) {
+  margin-bottom: 45px;
 }
